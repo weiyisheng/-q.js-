@@ -51,4 +51,11 @@ var maybeOneOneSecondLater = function () {
 
 maybeOneOneSecondLater().then(callback);
 ```
-我们可以通过then方法注册callback。现在
+我们可以通过then方法注册callback，此时有两个问题：
+* 只有最后一个then注册的callback是有效的
+* 如果callback是在1s之后才注册的，那将永远不会被调用到
+
+
+
+
+
